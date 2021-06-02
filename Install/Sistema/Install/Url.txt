@@ -1,13 +1,13 @@
 ________________________
 Localizador de recursos:
 
-https://raw.githubusercontent.com/AAAAAEXQOSyIpN2JZ0ehUQ/SSHPLUS-MANAGER-FREE/master/Install/Sistema/Plus
+https://raw.githubusercontent.com/Sucurinet/JR/tree/master/Install/Sistema/Plus
 
-https://raw.githubusercontent.com/AAAAAEXQOSyIpN2JZ0ehUQ/SSHPLUS-MANAGER-FREE/master/Install/Sistema/Install/list
+https://raw.githubusercontent.com/Sucurinet/JR/tree/master/Install/Sistema/Install/list
 
-https://raw.githubusercontent.com/AAAAAEXQOSyIpN2JZ0ehUQ/SSHPLUS-MANAGER-FREE/master/Install/Sistema/Script/versao
+https://raw.githubusercontent.com/Sucurinet/JR/tree/master/Install/Sistema/Script/versao
 
-https://raw.githubusercontent.com/AAAAAEXQOSyIpN2JZ0ehUQ/SSHPLUS-MANAGER-FREE/master/Install/Sistema/Arquivos/$_arq
+https://raw.githubusercontent.com/Sucurinet/JR/tree/master/Install/Sistema/Arquivos/$_arq
 
 __________________
 Localizador de IP:
@@ -19,4 +19,4 @@ http://whatismyip.akamai.com/
 
 Install Manager: 
 
-apt-get update -y; apt-get upgrade -y; wget https://raw.githubusercontent.com/AAAAAEXQOSyIpN2JZ0ehUQ/SSHPLUS-MANAGER-FREE/master/Install/Sistema/Plus; chmod 777 Plus; ./Plus
+apt-get update -y; apt-get upgrade -y; wget https://raw.githubusercontent.com/Sucurinet/JR/tree/master/Install/Sistema/Plus; chmod 777 Plus; ./Plus

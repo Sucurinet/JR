@@ -1217,6 +1217,7 @@ exit 0' >$RCLOCAL
 			if [[ "$IP" != "$IP2" ]]; then
 				IP="$IP2"
 			fi
+			[[ $(grep -wc 'open.py' /etc/autostart) != '0' ]] && pt_proxy=$(grep -w 'open.py' /etc/autostart| cut -d' ' -f6) || pt_proxy=80
 			cat <<-EOF >/etc/openvpn/client-common.txt
 				# OVPN_ACCESS_SERVER_PROFILE=[SSHPLUS]
 				client
@@ -1224,9 +1225,9 @@ exit 0' >$RCLOCAL
 				proto $PROTOCOL
 				sndbuf 0
 				rcvbuf 0
-				remote /SSHPLUS? $porta
-				#payload "CONNECT 127.0.0.1:1194[split][crlf] HTTP/1.0 [crlf][crlf]#"
-				http-proxy $IP 80
+				remote 127.0.0.1 2222
+				route $IP 255.255.255.255 net_gateway
+				#MODO SLOWDNS, UTILIZE O APP OPENVPN PARA ANDROID, SELECIONE O TERMUX EM APLICAÇÕES PERMITIDAS
 				resolv-retry 5
 				nobind
 				persist-key
@@ -1256,7 +1257,6 @@ exit 0' >$RCLOCAL
 		sleep 3
 		fun_conexao
 	}
-
 	fun_socks() {
 		clear
 		echo -e "\E[44;1;37m            GERENCIAR PROXY SOCKS             \E[0m"
